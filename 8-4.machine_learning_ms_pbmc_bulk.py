@@ -158,7 +158,8 @@ print(cross_val_score(rfc,df.drop(columns=['patient']),label,cv=10).var())
 # In[93]:
 
 
-ra_feature=pd.read_csv('./model/ra_synovial_feature_importance_bulk.csv')
+#ra_feature=pd.read_csv('./model/ra_synovial_feature_importance_bulk.csv')
+ra_feature=pd.read_csv('./model/ms_pbmc_feature_importance_bulk.csv')
 fig, ax = plt.subplots(figsize=(15, 5))
 ax.bar(x=ra_feature['feature_importance'], height=ra_feature['0'])
 ax.set_title("Feature importance for MS bulk RNA PBMC model", fontsize=15)
